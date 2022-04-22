@@ -1,4 +1,4 @@
-#include <string>
+#include <cstring>
 #include "includes/colors.h"
 #include "includes/keymap.h"
 
@@ -14,7 +14,7 @@ char *vidptr = (char*)0xb8000;
 int location = 0;
 // a counter used for everything
 int counter = 0;
-std::string string = "Hello ";
+char string[80] = "Hello ";
 void clear() {
 	counter = 0;
 	location = 0;
@@ -43,6 +43,6 @@ void kprint(const char *str, int color) {
 extern "C"
 void kmain() {
 	clear();
-	string = string + "World";
-	kprint(string.c_str(), VGA_COLOR_GREEN);
+	string = strcat(string, "World");
+	kprint(string, VGA_COLOR_GREEN);
 }
