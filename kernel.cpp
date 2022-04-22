@@ -1,3 +1,4 @@
+#define _GLIBCXX_USE_CXX11_ABI 0
 #include "includes/colors.h"
 #include "includes/keymap.h"
 #include <string>
