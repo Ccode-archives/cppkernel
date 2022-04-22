@@ -81,7 +81,7 @@ start:
   mov gs, ax
   mov ss, ax
   mov esp, stack_space	;set stack pointer
-  call kmain
+  call _kmain
   jmp $		 	;halt the CPU
 
 section .bss
