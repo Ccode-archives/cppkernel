@@ -27,7 +27,7 @@ void clear() {
 	}
 }
 
-void kprint(const char str, int color) {
+void kprint(const char *str, int color) {
 	counter = 0;
 	//run until end of string is found
 	while(str[counter] != '\0') {
