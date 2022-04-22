@@ -13,7 +13,7 @@ global write_port
 global load_idt
 global kbhandler
 
-extern _kmain	        ;kmain is defined in the cpp file
+extern kmain	        ;kmain is defined in the cpp file
 
 
 
@@ -81,7 +81,7 @@ start:
   mov gs, ax
   mov ss, ax
   mov esp, stack_space	;set stack pointer
-  call _kmain
+  call kmain
   jmp $		 	;halt the CPU
 
 section .bss
