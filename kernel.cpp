@@ -1,4 +1,3 @@
-#include <cstring>
 #include "includes/colors.h"
 #include "includes/keymap.h"
 
@@ -7,15 +6,14 @@ extern char read_port(unsigned short port);
 extern void write_port(unsigned short port, unsigned char data);
 extern void load_idt(unsigned long *idt_ptr);
 
-
+using namespace std;
 
 char *vidptr = (char*)0xb8000;
 // location on screen in bytes
 int location = 0;
 // a counter used for everything
 int counter = 0;
-char string[80] = "Hello ";
-char string2[80] = "World";
+string string = "Hello ";
 void clear() {
 	counter = 0;
 	location = 0;
@@ -44,6 +42,6 @@ void kprint(const char *str, int color) {
 extern "C"
 void kmain() {
 	clear();
-	strcat(string, string2);
+	string = string + "World";
 	kprint(string, VGA_COLOR_GREEN);
 }
