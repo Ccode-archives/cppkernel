@@ -44,6 +44,6 @@ void kprint(const char *str, int color) {
 extern "C"
 void kmain() {
 	clear();
-	string = strcat(string, string2);
+	strcat(string, string2);
 	kprint(string, VGA_COLOR_GREEN);
 }
