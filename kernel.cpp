@@ -44,5 +44,5 @@ extern "C"
 void kmain() {
 	clear();
 	string = string + "World";
-	kprint(string, VGA_COLOR_GREEN);
+	kprint(string.c_str(), VGA_COLOR_GREEN);
 }
