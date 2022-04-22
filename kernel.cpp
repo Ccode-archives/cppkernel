@@ -14,7 +14,7 @@ char *vidptr = (char*)0xb8000;
 int location = 0;
 // a counter used for everything
 int counter = 0;
-string string = "Hello ";
+std::string string = "Hello ";
 void clear() {
 	counter = 0;
 	location = 0;
