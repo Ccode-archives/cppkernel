@@ -13,8 +13,7 @@ global write_port
 global load_idt
 global kbhandler
 
-extern kmain	        ;kmain is defined in the c file
-extern term
+extern _kmain	        ;kmain is defined in the cpp file
 
 
 
@@ -58,9 +57,6 @@ read_port:
 			;al is the lower 8 bits of eax
 	in al, dx	;dx is the lower 16 bits of edx
 	ret
-kbhandler:                 
-	call    term
-	iretd
 write_port:
 	mov   edx, [esp + 4]    
 	mov   al, [esp + 4 + 4]  
