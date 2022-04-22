@@ -1,5 +1,6 @@
 #include "includes/colors.h"
 #include "includes/keymap.h"
+#include <string>
 
 
 extern char read_port(unsigned short port);
