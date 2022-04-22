@@ -15,6 +15,7 @@ int location = 0;
 // a counter used for everything
 int counter = 0;
 char string[80] = "Hello ";
+char string2[80] = "World";
 void clear() {
 	counter = 0;
 	location = 0;
@@ -43,6 +44,6 @@ void kprint(const char *str, int color) {
 extern "C"
 void kmain() {
 	clear();
-	string = strcat(string, "World");
+	string = strcat(string, string2);
 	kprint(string, VGA_COLOR_GREEN);
 }
