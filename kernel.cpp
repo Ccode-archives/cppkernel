@@ -14,7 +14,7 @@ char *vidptr = (char*)0xb8000;
 int location = 0;
 // a counter used for everything
 int counter = 0;
-string string = "Hello ";
+string string1 = "Hello ";
 void clear() {
 	counter = 0;
 	location = 0;
@@ -43,6 +43,6 @@ void kprint(const char *str, int color) {
 extern "C"
 void kmain() {
 	clear();
-	string = string + "World";
-	kprint(string.c_str(), VGA_COLOR_GREEN);
+	string1 = string1 + "World";
+	kprint(string1.c_str(), VGA_COLOR_GREEN);
 }
